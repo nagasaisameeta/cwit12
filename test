@@ -1,0 +1,28 @@
+s3user
+user@12345
+
+AKIA5SCTWLMNLI3ATJ5O
+
+
+eQY2y/I2W26sNm7tExY86QNUVhYua4sk/gD0J/dv
+
+
+aws s3 sync s3://wildrydes-us-east-1/WebApplication/1_StaticWebHosting/website s3://bucket2234 --region us-east-1
+
+
+
+
+
+{
+  "Version":"2012-10-17",
+  "Statement":[
+    {
+      "Sid":"AddPerm",
+      "Effect":"Allow",
+      "Principal": "*",
+      "Action":["s3:GetObject"],
+      "Resource":["arn:aws:s3:::bucket2234/*"]
+    }
+  ]
+}
+
